@@ -1,14 +1,14 @@
 package com.blitzapp.eventready.android;
 
-import static com.blitzapp.animatedsplash.animation.AddImageView.FIT_CENTER;
-import static com.blitzapp.animatedsplash.animation.AddImageView.getCenterX;
-import static com.blitzapp.animatedsplash.animation.AddImageView.getCenterY;
+
+
+import static com.blitzapp.animatedsplash.animation.AnimatedImage.FIT_CENTER;
+import static com.blitzapp.animatedsplash.animation.AnimatedImage.getCenterX;
+import static com.blitzapp.animatedsplash.animation.AnimatedImage.getCenterY;
 import static com.blitzapp.animatedsplash.animation.GroupAnimation.splash;
 import static com.blitzapp.animatedsplash.animation.Splash.FADE;
 import static com.blitzapp.animatedsplash.animation.Splash.SPLASHFADE;
-import static com.blitzapp.animatedsplash.animation.Splash.SPLASHSLIDEDOWN;
 import static com.blitzapp.animatedsplash.animation.Splash.performSingleAnimation;
-import static com.blitzapp.animatedsplash.animation.Splash.screenHeight;
 import static com.blitzapp.animatedsplash.animation.Splash.screenWidth;
 import static com.blitzapp.animatedsplash.animation.Splash.setBackgroundColor;
 import static com.blitzapp.animatedsplash.animation.Splash.setSplashHideAnimation;
@@ -17,7 +17,7 @@ import static com.blitzapp.animatedsplash.animation.Splash.splashShow;
 
 import android.os.Bundle;
 
-import com.blitzapp.animatedsplash.animation.AddImageView;
+import com.blitzapp.animatedsplash.animation.AnimatedImage;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
@@ -34,7 +34,7 @@ public class MainActivity extends ReactActivity {
     setSplashHideDelay(1000);
     double logoWidth = screenWidth * 0.624;
     double logoHeight = logoWidth * 1.064;
-    AddImageView logo = new AddImageView(R.drawable.logo, logoWidth, logoHeight, getCenterX(logoWidth), getCenterY(logoHeight), 0, FIT_CENTER, false);
+    AnimatedImage logo = new AnimatedImage(R.drawable.logo, logoWidth, logoHeight, getCenterX(logoWidth), getCenterY(logoHeight), 0, FIT_CENTER, false);
     performSingleAnimation(logo, FADE, 600, 0f, 1f);
     splashShow();
   }
