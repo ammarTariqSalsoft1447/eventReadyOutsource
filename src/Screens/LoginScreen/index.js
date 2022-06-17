@@ -24,6 +24,7 @@ const LoginScreen = props => {
             <MainButton
                 text='Sign In'
                 style={styles.button}
+                onPress={() => props.navigation.navigate('DrawerNavigation')}
             />
             <MainButton
                 onPress={() => props.navigation.navigate('ForgotPasswordScreen')}
