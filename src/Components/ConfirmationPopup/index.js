@@ -6,7 +6,7 @@ import { BlurView } from "@react-native-community/blur";
 import styles from "./styles";
 import { RegularText } from "../TextWrappers";
 import MainButton from "../MainButton";
-const SuccessPopup = (props) => {
+const ConfirmationPopup = (props) => {
     const [visible, setVisible] = React.useState(false)
     useImperativeHandle(props.reference, () => ({
         close: close,
@@ -19,25 +19,40 @@ const SuccessPopup = (props) => {
     const open = () => {
         setVisible(true)
     }
+    const handleNo = () => {
+        close()
+        if (props.onNo) props.onNo()
+    }
+    const handleYes = () => {
+        close()
+        if (props.onYes) props.onYes()
+    }
     const renderContent = () => {
         return (
             <View style={styles.content}>
                 <View style={styles.bar} />
                 <Image
                     style={styles.thumbsUp}
-                    source={require('../../Assets/images/thumbsUp.png')} />
+                    source={require('../../Assets/images/confirmationMark.png')} />
                 <RegularText style={styles.message}>
-                   {props.message ? props.message : 'Password Has Been Updated!'}
+                    {props.message}
                 </RegularText>
-                <MainButton
-                    pressedColor='#C8A12D'
-                    color='#252120'
-                    pressedTextColor='#000000'
-                    textColor='#FFFFFF'
-                    text="OK"
-                    style={styles.button}
-                    onPress={close}
-                />
+                <View style={styles.buttonsContainer}>
+                    <MainButton
+                        pressedColor='#C8A12D'
+                        color='#252120'
+                        pressedTextColor='#000000'
+                        textColor='#FFFFFF'
+                        text="Yes"
+                        style={styles.button}
+                        onPress={handleYes}
+                    />
+                    <MainButton
+                        text="No"
+                        style={[styles.button, styles.noButton]}
+                        onPress={handleNo}
+                    />
+                </View>
             </View>
         )
     }
@@ -53,4 +68,4 @@ const SuccessPopup = (props) => {
         </Modal>
     )
 }
-export default SuccessPopup;
+export default ConfirmationPopup;
