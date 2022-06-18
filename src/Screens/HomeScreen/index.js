@@ -59,9 +59,9 @@ const HomeScreen = props => {
             <View style={styles.mainButtonsContainer}>
                 {renderMainButtons("WHAT's ON", require('../../Assets/images/whatsOnIcon.png'), () => props.navigation.navigate('WhatsOnScreen'))}
                 {renderMainButtons("SCHEDULE", require('../../Assets/images/scheduleIcon.png'), () => props.navigation.navigate('ScheduleListScreen'))}
-                {renderMainButtons("MY EXHIBITORS", require('../../Assets/images/myExhibitors.png'))}
-                {renderMainButtons("EXHIBITORS", require('../../Assets/images/exhibitorsIcon.png'))}
-                {renderMainButtons("ATTENDEE", require('../../Assets/images/attendeeIcon.png'))}
+                {renderMainButtons("MY EXHIBITORS", require('../../Assets/images/myExhibitors.png'), () => props.navigation.navigate('MyExhibitorsListScreen'))}
+                {renderMainButtons("EXHIBITORS", require('../../Assets/images/exhibitorsIcon.png'), () => props.navigation.navigate('ExhibitorsListScreen'))}
+                {renderMainButtons("ATTENDEE", require('../../Assets/images/attendeeIcon.png'),()=>props.navigation.navigate('AttendeesListScreen'))}
                 {renderMainButtons("MESSAGING", require('../../Assets/images/messagingIcon.png'))}
                 {renderMainButtons("SPEAKERS", require('../../Assets/images/speakersIcon.png'),()=>props.navigation.navigate('SpeakersListScreen'))}
                 {renderMainButtons("MY PROFILE", require('../../Assets/images/myProfileIcon.png'))}

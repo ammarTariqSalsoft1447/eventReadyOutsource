@@ -19,6 +19,10 @@ import SpeakerDetailsScreen from '../Screens/SpeakerDetailsScreen';
 import MapScreen from '../Screens/MapScreen';
 import DocumentListScreen from '../Screens/DocumentListScreen';
 import DocumentViewScreen from '../Screens/DocumentViewScreen';
+import ExhibitorsListScreen from '../Screens/ExhibitorsListScreen';
+import ExhibitorDetailsScreen from '../Screens/ExhibitorDetailsScreen';
+import AttendeesListScreen from '../Screens/AttendeesListScreen';
+import AttendeeDetailsScreen from '../Screens/AttendeeDetailsScreen';
 const Stack = createStackNavigator();
 
 const AuthStack = props => {
@@ -46,6 +50,11 @@ const AuthStack = props => {
             <Stack.Screen name="DocumentListScreen" component={DocumentListScreen} />
             <Stack.Screen name="MyDocumentListScreen" component={DocumentListScreen} />
             <Stack.Screen name="DocumentViewScreen" component={DocumentViewScreen} />
+            <Stack.Screen name="ExhibitorsListScreen" component={ExhibitorsListScreen} />
+            <Stack.Screen name="MyExhibitorsListScreen" component={ExhibitorsListScreen} />
+            <Stack.Screen name="ExhibitorDetailsScreen" component={ExhibitorDetailsScreen} />
+            <Stack.Screen name="AttendeesListScreen" component={AttendeesListScreen} />
+            <Stack.Screen name="AttendeeDetailsScreen" component={AttendeeDetailsScreen} />
             
         </Stack.Navigator>
     )
