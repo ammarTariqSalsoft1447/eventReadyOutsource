@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import { vh, vw } from "../Utils/unitConversion";
 
 const styles = StyleSheet.create({
@@ -7,12 +7,20 @@ const styles = StyleSheet.create({
     },
     headerStyle: {
         backgroundColor: '#C8A12D',
-        elevation:0
+        elevation: 0,
+        borderBottomWidth:0,
+        shadowOpacity: 0, // remove shadow on iOS
+
     },
     leftIcon: {
         height: vh(2.5),
         width: vh(2.5),
-        resizeMode: 'contain'
+        resizeMode: 'contain',
+        ...Platform.select({
+            ios:{
+                marginLeft: vw(4)
+            }
+        })
     },
     drawerIcon: {
         marginLeft: vw(4)

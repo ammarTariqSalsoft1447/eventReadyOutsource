@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import { vh, vw } from "../../Utils/unitConversion";
 
 const styles = StyleSheet.create({
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         paddingHorizontal: vw(2),
-        height: vw(16),
+        height: vw(20),
 
     },
     topButtonIcon: {
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
     topButtonLabel: {
-        fontSize: vh(1.6),
+        fontSize: vh(1.4),
         color: '#FFFFFF'
     },
     mainButtonsContainer: {
@@ -84,7 +84,13 @@ const styles = StyleSheet.create({
         marginBottom: vh(1),
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        ...Platform.select({
+            ios: {
+                paddingVertical: vh(1)
+            }
+        }),
+        marginTop:vh(2)
     },
     searchField: {
         width: vw(78),

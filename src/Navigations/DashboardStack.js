@@ -26,6 +26,7 @@ import { textStyles } from "../Components/TextWrappers";
 import { useNavigation } from "@react-navigation/native";
 import NotificationsScreen from "../Screens/NotificationsScreen";
 import MessagingScreen from "../Screens/MessagingScreen";
+import { vw } from "../Utils/unitConversion";
 const Stack = createStackNavigator()
 export const headerTitle = {
     HomeScreen: 'OBAP',
@@ -82,6 +83,7 @@ const DashboardStack = () => {
         <Stack.Navigator
             screenOptions={props => {
                 return {
+                    headerBackTitleVisible:false,
                     headerTitleAlign: 'center',
                     headerTitleStyle: [textStyles.regular, styles.titleStyle],
                     headerStyle: styles.headerStyle,
