@@ -8,12 +8,14 @@ import styles from "./styles";
 const HomeScreen = props => {
     const renderTopButton = (label, icon, onPress = () => { }) => {
         return (
-            <Pressable style={({ pressed }) => [
-                styles.topButton,
-                pressed && {
-                    backgroundColor: '#C8A12D'
-                }
-            ]}>
+            <Pressable
+                onPress={onPress}
+                style={({ pressed }) => [
+                    styles.topButton,
+                    pressed && {
+                        backgroundColor: '#C8A12D'
+                    }
+                ]}>
                 <Image source={icon} style={styles.topButtonIcon} />
                 <RegularText style={styles.topButtonLabel}>{label}</RegularText>
             </Pressable>
@@ -21,14 +23,14 @@ const HomeScreen = props => {
     }
     const renderMainButtons = (label, icon, onPress = () => { }) => {
         return (
-            <Pressable 
-            onPress={onPress}
-            style={({ pressed }) => [
-                styles.mainButton,
-                pressed && {
-                    backgroundColor: '#C8A12D'
-                }
-            ]}>
+            <Pressable
+                onPress={onPress}
+                style={({ pressed }) => [
+                    styles.mainButton,
+                    pressed && {
+                        backgroundColor: '#C8A12D'
+                    }
+                ]}>
                 <Image source={icon} style={styles.mainButtonIcon} />
                 <RegularText style={styles.mainButtonLabel}>{label}</RegularText>
             </Pressable>
@@ -49,22 +51,22 @@ const HomeScreen = props => {
                 style={styles.bannerImage}
             />
             <View style={styles.topButtonsContainer}>
-                {renderTopButton('MY DOCUMENTS', require('../../Assets/images/documentsIcon.png'))}
-                {renderTopButton('DOCUMENTS', require('../../Assets/images/documentsIcon.png'))}
-                {renderTopButton('SPONSORS', require('../../Assets/images/sponsorsIcon.png'))}
-                {renderTopButton('VENUES', require('../../Assets/images/venueIcon.png'))}
+                {renderTopButton('MY DOCUMENTS', require('../../Assets/images/documentsIcon.png'),()=>props.navigation.navigate('MyDocumentListScreen'))}
+                {renderTopButton('DOCUMENTS', require('../../Assets/images/documentsIcon.png'),()=>props.navigation.navigate('DocumentListScreen'))}
+                {renderTopButton('SPONSORS', require('../../Assets/images/sponsorsIcon.png'), () => props.navigation.navigate('SponsorsListScreen'))}
+                {renderTopButton('VENUES', require('../../Assets/images/venueIcon.png'), () => props.navigation.navigate('MapScreen'))}
             </View>
             <View style={styles.mainButtonsContainer}>
                 {renderMainButtons("WHAT's ON", require('../../Assets/images/whatsOnIcon.png'), () => props.navigation.navigate('WhatsOnScreen'))}
-                {renderMainButtons("SCHEDULE", require('../../Assets/images/scheduleIcon.png'),() => props.navigation.navigate('ScheduleListScreen'))}
+                {renderMainButtons("SCHEDULE", require('../../Assets/images/scheduleIcon.png'), () => props.navigation.navigate('ScheduleListScreen'))}
                 {renderMainButtons("MY EXHIBITORS", require('../../Assets/images/myExhibitors.png'))}
                 {renderMainButtons("EXHIBITORS", require('../../Assets/images/exhibitorsIcon.png'))}
                 {renderMainButtons("ATTENDEE", require('../../Assets/images/attendeeIcon.png'))}
                 {renderMainButtons("MESSAGING", require('../../Assets/images/messagingIcon.png'))}
-                {renderMainButtons("SPEAKERS", require('../../Assets/images/speakersIcon.png'))}
+                {renderMainButtons("SPEAKERS", require('../../Assets/images/speakersIcon.png'),()=>props.navigation.navigate('SpeakersListScreen'))}
                 {renderMainButtons("MY PROFILE", require('../../Assets/images/myProfileIcon.png'))}
-                {renderMainButtons("MY NOTES", require('../../Assets/images/myNotesIcon.png'))}
-                {renderMainButtons("SURVEYS", require('../../Assets/images/surveysIcon.png'),() => props.navigation.navigate('SurveysScreen'))}
+                {renderMainButtons("MY NOTES", require('../../Assets/images/myNotesIcon.png'), () => props.navigation.navigate('MyNotesScreen'))}
+                {renderMainButtons("SURVEYS", require('../../Assets/images/surveysIcon.png'), () => props.navigation.navigate('SurveysScreen'))}
             </View>
             <View style={styles.venues}>
                 <RegularText style={styles.venueMapsHeading}>

@@ -69,12 +69,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     venueMapsHeading: {
-        marginVertical: vh(1),
+        marginVertical: vh(2),
         fontSize: vh(2.5),
         color: '#000000'
     },
     mapButton: {
-        marginBottom: vh(1)
+        marginBottom: vh(1.5)
     },
     searchBarContainer: {
         backgroundColor: '#EEF2FF',

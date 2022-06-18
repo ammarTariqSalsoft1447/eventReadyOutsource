@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
         width:vw(100),
         marginBottom:vh(2),
         padding:vw(5),
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center'
     },
     timeContainer: {
         flexDirection: 'row',
@@ -28,9 +31,25 @@ const styles = StyleSheet.create({
         color:'#C8A12D'
     },
     des: {
+        fontSize: vh(1.6),
+        color:'#666666',
+        // marginTop:vw(2)
+    },
+    heading:{
         fontSize: vh(1.8),
         color:'#000000',
-        marginTop:vw(2)
+        marginVertical:vw(1)  
     },
+    view:{
+        color:'#C8A12D',
+        fontSize:vh(1.8),
+        width:vw(25),
+        textAlign:'center',
+    },
+    contentContainer:{
+        width:vw(75),
+        paddingLeft:vw(5),
+
+    }
 })
 export default styles;
