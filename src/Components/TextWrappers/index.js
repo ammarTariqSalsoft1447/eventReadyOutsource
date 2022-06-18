@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text } from "react-native";
+import fonts from "../../Assets/fonts";
 import { vh } from "../../Utils/unitConversion";
 const TextHOC = props => {
     return (
@@ -51,13 +52,16 @@ export const MediumText = props => {
 
 export const textStyles = StyleSheet.create({
     regular: {
-        fontSize: vh(1.8)
+        fontSize: vh(1.8),
+        fontFamily:fonts.regular
     },
     semiBold:{
-        fontSize: vh(1.8)
+        fontSize: vh(1.8),
+        fontFamily:fonts.semiBold
     },
     medium:{
-        fontSize: vh(1.8)
+        fontSize: vh(1.8),
+        fontFamily:fonts.medium
     }
 })
 export default TextHOC;

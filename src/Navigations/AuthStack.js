@@ -3,26 +3,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from '../Screens/LoginScreen';
 import ForgotPasswordScreen from '../Screens/ForgotPasswordScreen';
 import RegisterScreen from '../Screens/RegisterScreen';
-import HomeScreen from '../Screens/HomeScreen';
-import DrawerNavigation from './DrawerNavigation';
-import VenueMapScreen from '../Screens/VenueMapScreen';
-import WhatsOnScreen from '../Screens/WhatsOnScreen';
-import ScheduleListScreen from '../Screens/ScheduleListScreen';
-import SurveysScreen from '../Screens/SurveysScreen';
-import ScheduleDetailsScreen from '../Screens/ScheduleDetailsScreen';
-import MyNotesScreen from '../Screens/MyNotesScreen';
-import AddNoteScreen from '../Screens/AddNoteScreen';
-import SponsorsListScreen from '../Screens/SponsorsListScreen';
-import SponsorDetailsScreen from '../Screens/SponsorDetailsScreen';
-import SpeakersListScreen from '../Screens/SpeakersListScreen';
-import SpeakerDetailsScreen from '../Screens/SpeakerDetailsScreen';
-import MapScreen from '../Screens/MapScreen';
-import DocumentListScreen from '../Screens/DocumentListScreen';
-import DocumentViewScreen from '../Screens/DocumentViewScreen';
-import ExhibitorsListScreen from '../Screens/ExhibitorsListScreen';
-import ExhibitorDetailsScreen from '../Screens/ExhibitorDetailsScreen';
-import AttendeesListScreen from '../Screens/AttendeesListScreen';
-import AttendeeDetailsScreen from '../Screens/AttendeeDetailsScreen';
 const Stack = createStackNavigator();
 const AuthStack = props => {
     return (

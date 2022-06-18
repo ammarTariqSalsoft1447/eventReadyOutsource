@@ -62,9 +62,9 @@ const HomeScreen = props => {
                 {renderMainButtons("MY EXHIBITORS", require('../../Assets/images/myExhibitors.png'), () => props.navigation.navigate('MyExhibitorsListScreen'))}
                 {renderMainButtons("EXHIBITORS", require('../../Assets/images/exhibitorsIcon.png'), () => props.navigation.navigate('ExhibitorsListScreen'))}
                 {renderMainButtons("ATTENDEE", require('../../Assets/images/attendeeIcon.png'),()=>props.navigation.navigate('AttendeesListScreen'))}
-                {renderMainButtons("MESSAGING", require('../../Assets/images/messagingIcon.png'))}
+                {renderMainButtons("MESSAGING", require('../../Assets/images/messagingIcon.png'),()=>props.navigation.navigate('MessagingScreen'))}
                 {renderMainButtons("SPEAKERS", require('../../Assets/images/speakersIcon.png'),()=>props.navigation.navigate('SpeakersListScreen'))}
-                {renderMainButtons("MY PROFILE", require('../../Assets/images/myProfileIcon.png'))}
+                {renderMainButtons("MY PROFILE", require('../../Assets/images/myProfileIcon.png'),()=>props.navigation.navigate('AnimatedProfileStack'))}
                 {renderMainButtons("MY NOTES", require('../../Assets/images/myNotesIcon.png'), () => props.navigation.navigate('MyNotesScreen'))}
                 {renderMainButtons("SURVEYS", require('../../Assets/images/surveysIcon.png'), () => props.navigation.navigate('SurveysScreen'))}
             </View>

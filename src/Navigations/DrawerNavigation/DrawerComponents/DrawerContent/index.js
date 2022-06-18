@@ -8,8 +8,14 @@ import styles from './styles';
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable)
 const DrawerContent = props => {
   const renderDrawerItem = (label, icon, onPress = () => { }) => {
+    const handleOnPress = () => {
+      props.navigation.closeDrawer()
+      if (onPress) {
+        onPress()
+      }
+    }
     return (
-      <AnimatedPressable style={styles.drawerButton}>
+      <AnimatedPressable onPress={handleOnPress} style={styles.drawerButton}>
         <Image source={icon} style={styles.drawerIcon} />
         <RegularText style={styles.drawerLabel}>
           {label}
@@ -19,7 +25,7 @@ const DrawerContent = props => {
   }
   return (
     <Animated.View style={styles.container}>
-  
+
       <Image
         style={styles.userPicture}
         source={require('../../../../Assets/images/userProfilePhotoDrawer.png')}
@@ -28,10 +34,10 @@ const DrawerContent = props => {
         JOY ROOT
       </RegularText>
       <View style={styles.drawerButtonContainer}>
-        {renderDrawerItem('dashboard', require('../../../../Assets/images/dashboardIconn.png'))}
+        {renderDrawerItem('dashboard', require('../../../../Assets/images/dashboardIconn.png'),()=>props.navigation.navigate('AnimatedDashboard'))}
         {renderDrawerItem('twitter', require('../../../../Assets/images/twitterIcon.png'))}
-        {renderDrawerItem('my profile', require('../../../../Assets/images/myProfileDrawer.png'))}
-        {renderDrawerItem('contact us', require('../../../../Assets/images/contactUs.png'))}
+        {renderDrawerItem('my profile', require('../../../../Assets/images/myProfileDrawer.png'),()=>props.navigation.navigate('AnimatedProfileStack'))}
+        {renderDrawerItem('contact us', require('../../../../Assets/images/contactUs.png'),()=>props.navigation.navigate('AnimatedContactUs'))}
         {renderDrawerItem('logout', require('../../../../Assets/images/logout.png'))}
       </View>
     </Animated.View>

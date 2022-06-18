@@ -2,6 +2,7 @@ import React from "react";
 import {
     Image, TextInput
 } from 'react-native'
+import { textStyles } from "../TextWrappers";
 import styles from "./styles";
 const InputField = (props) => {
     return (
@@ -10,7 +11,7 @@ const InputField = (props) => {
             selectionColor={'#C8A12D'}
             allowFontScaling={false}
             {...props}
-            style={[styles.input, props.style]}
+            style={[textStyles.regular,styles.input, props.style]}
         />
     )
 }

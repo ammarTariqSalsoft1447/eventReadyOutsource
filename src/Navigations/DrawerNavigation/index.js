@@ -1,6 +1,5 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import HomeScreen from "../../Screens/HomeScreen";
 import DrawerScreenWrapper from "./DrawerComponents/DrawerScreenWrapper";
 import DrawerContent from "./DrawerComponents/DrawerContent";
 import { vw } from "../../Utils/unitConversion";
