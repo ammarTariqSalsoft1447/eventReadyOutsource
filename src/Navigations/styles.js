@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
         fontSize: vh(2.5)
     },
     headerStyle: {
-        backgroundColor: '#C8A12D'
+        backgroundColor: '#C8A12D',
+        elevation:0
     },
     leftIcon: {
         height: vh(2.5),

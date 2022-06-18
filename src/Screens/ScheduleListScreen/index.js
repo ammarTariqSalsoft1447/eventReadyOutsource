@@ -3,10 +3,11 @@ import { WebView } from 'react-native-webview';
 import { FlatList, Image, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 import { MediumText, RegularText, SemiBoldText } from "../../Components/TextWrappers";
+import HeaderSearchBar from "../../Components/HeaderSearchBar";
 const ScheduleListScreen = props => {
     const renderItem = ({ index, item }) => {
         return (
-            <TouchableOpacity onPress={()=>props.navigation.navigate('ScheduleDetailsScreen')} style={styles.button}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('ScheduleDetailsScreen')} style={styles.button}>
                 <View style={styles.contentContainer}>
                     <View style={styles.timeContainer}>
                         <RegularText style={styles.date}>
@@ -33,6 +34,7 @@ const ScheduleListScreen = props => {
     }
     return (
         <FlatList
+            ListHeaderComponent={<HeaderSearchBar placeholder='Search' />}
             contentContainerStyle={styles.scrollContent}
             style={styles.flatList}
             renderItem={renderItem}

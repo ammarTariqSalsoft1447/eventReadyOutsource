@@ -4,11 +4,12 @@ import { FlatList, Image, StyleSheet, Touchable, TouchableOpacity, View } from "
 import styles from "./styles";
 import MapView from 'react-native-maps'
 import { MediumText, RegularText, SemiBoldText } from "../../Components/TextWrappers";
+import HeaderSearchBar from "../../Components/HeaderSearchBar";
 const DocumentListScreen = props => {
     const isMine = props.route.name.includes('My')
     const renderItem = ({ item, index }) => {
         return (
-            <TouchableOpacity onPress={()=>props.navigation.navigate('DocumentViewScreen')} style={styles.button}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('DocumentViewScreen')} style={styles.button}>
                 <View style={styles.nameContainer}>
                     <SemiBoldText style={styles.name}>
                         (L) 2021 Legislature
@@ -28,6 +29,7 @@ const DocumentListScreen = props => {
     }
     return (
         <FlatList
+            ListHeaderComponent={<HeaderSearchBar placeholder='Search' />}
             style={styles.scroll}
             contentContainerStyle={styles.scrollContent}
             data={[1, 2, 4, 5, 7, 3, 4, 6, 3, 4, 6]}

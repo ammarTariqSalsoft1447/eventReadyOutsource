@@ -4,6 +4,7 @@ import { FlatList, Image, Pressable, ScrollView, TouchableOpacity, View } from "
 import styles from "./styles";
 import { MediumText, RegularText, SemiBoldText } from "../../Components/TextWrappers";
 import MainButton from "../../Components/MainButton";
+import HeaderSearchBar from "../../Components/HeaderSearchBar";
 const AttendeesListScreen = props => {
     const renderItem = ({ item, index }) => {
         return (
@@ -28,6 +29,7 @@ const AttendeesListScreen = props => {
     }
     return (
         <FlatList
+            ListHeaderComponent={<HeaderSearchBar placeholder='Search' />}
             style={styles.scroll}
             contentContainerStyle={styles.scrollContent}
             data={[1, 2, 3, 4]}
