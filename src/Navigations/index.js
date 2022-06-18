@@ -1,12 +1,11 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-
 import 'react-native-gesture-handler'
-import AuthStack from './AuthStack'
+import MainStack from './MainStack'
 const Navigations = (props) => {
     return (
         <NavigationContainer {...props}>
-            <AuthStack />
+            <MainStack />
         </NavigationContainer>
     )
 }

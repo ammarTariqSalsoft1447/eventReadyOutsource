@@ -4,15 +4,33 @@ import HomeScreen from "../../Screens/HomeScreen";
 import DrawerScreenWrapper from "./DrawerComponents/DrawerScreenWrapper";
 import DrawerContent from "./DrawerComponents/DrawerContent";
 import { vw } from "../../Utils/unitConversion";
+import DashboardStack from "../DashboardStack";
+import ContactStack from "../ContactStack";
+import ProfileStack from "../ProfileStack";
 
 const Drawer = createDrawerNavigator();
-const AnimatedDashboard = props => {
+const AnimatedDashboardStack = props => {
   return (
     <DrawerScreenWrapper {...props}>
-      <HomeScreen />
+      <DashboardStack />
     </DrawerScreenWrapper>
   );
 };
+const AnimatedContactUs = props => {
+  return (
+    <DrawerScreenWrapper {...props}>
+      <ContactStack />
+    </DrawerScreenWrapper>
+  );
+};
+const AnimatedProfileStack = props => {
+  return (
+    <DrawerScreenWrapper {...props}>
+      <ProfileStack />
+    </DrawerScreenWrapper>
+  );
+}
+
 const DrawerNavigation = () => {
 
   return (
@@ -39,7 +57,9 @@ const DrawerNavigation = () => {
         return <DrawerContent {...props} />;
       }}
     >
-      <Drawer.Screen name="AnimatedDashboard" component={AnimatedDashboard} />
+      <Drawer.Screen name="AnimatedDashboard" component={AnimatedDashboardStack} />
+      <Drawer.Screen name="AnimatedContactUs" component={AnimatedContactUs} />
+      <Drawer.Screen name="AnimatedProfileStack" component={AnimatedProfileStack} />
     </Drawer.Navigator>
   );
 }

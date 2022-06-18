@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-import { Image, Pressable, TouchableOpacity, View } from 'react-native';
+import { Image, Pressable, StatusBar, TouchableOpacity, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { useDrawerProgress } from '@react-navigation/drawer';
 import { RegularText } from '../../../../Components/TextWrappers';
@@ -10,7 +10,7 @@ const DrawerContent = props => {
   const renderDrawerItem = (label, icon, onPress = () => { }) => {
     return (
       <AnimatedPressable style={styles.drawerButton}>
-        <Image source={icon} style={styles.drawerIcon}/>
+        <Image source={icon} style={styles.drawerIcon} />
         <RegularText style={styles.drawerLabel}>
           {label}
         </RegularText>
@@ -19,6 +19,7 @@ const DrawerContent = props => {
   }
   return (
     <Animated.View style={styles.container}>
+  
       <Image
         style={styles.userPicture}
         source={require('../../../../Assets/images/userProfilePhotoDrawer.png')}

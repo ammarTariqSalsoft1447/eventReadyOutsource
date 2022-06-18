@@ -24,7 +24,6 @@ import ExhibitorDetailsScreen from '../Screens/ExhibitorDetailsScreen';
 import AttendeesListScreen from '../Screens/AttendeesListScreen';
 import AttendeeDetailsScreen from '../Screens/AttendeeDetailsScreen';
 const Stack = createStackNavigator();
-
 const AuthStack = props => {
     return (
         <Stack.Navigator
@@ -34,28 +33,6 @@ const AuthStack = props => {
             <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
             <Stack.Screen name="LoginScreen" component={LoginScreen} />
             <Stack.Screen name="ForgotPasswordScreen" component={ForgotPasswordScreen} />
-            <Stack.Screen name="DrawerNavigation" component={DrawerNavigation} />
-            <Stack.Screen name="VenueMapScreen" component={VenueMapScreen} />
-            <Stack.Screen name="WhatsOnScreen" component={WhatsOnScreen} />
-            <Stack.Screen name="ScheduleListScreen" component={ScheduleListScreen} />
-            <Stack.Screen name="SurveysScreen" component={SurveysScreen} />
-            <Stack.Screen name="ScheduleDetailsScreen" component={ScheduleDetailsScreen} />
-            <Stack.Screen name="MyNotesScreen" component={MyNotesScreen} />
-            <Stack.Screen name="AddNoteScreen" component={AddNoteScreen} />
-            <Stack.Screen name="SponsorsListScreen" component={SponsorsListScreen} />
-            <Stack.Screen name="SponsorDetailsScreen" component={SponsorDetailsScreen} />
-            <Stack.Screen name="SpeakersListScreen" component={SpeakersListScreen} />
-            <Stack.Screen name="SpeakerDetailsScreen" component={SpeakerDetailsScreen} />
-            <Stack.Screen name="MapScreen" component={MapScreen} />
-            <Stack.Screen name="DocumentListScreen" component={DocumentListScreen} />
-            <Stack.Screen name="MyDocumentListScreen" component={DocumentListScreen} />
-            <Stack.Screen name="DocumentViewScreen" component={DocumentViewScreen} />
-            <Stack.Screen name="ExhibitorsListScreen" component={ExhibitorsListScreen} />
-            <Stack.Screen name="MyExhibitorsListScreen" component={ExhibitorsListScreen} />
-            <Stack.Screen name="ExhibitorDetailsScreen" component={ExhibitorDetailsScreen} />
-            <Stack.Screen name="AttendeesListScreen" component={AttendeesListScreen} />
-            <Stack.Screen name="AttendeeDetailsScreen" component={AttendeeDetailsScreen} />
-            
         </Stack.Navigator>
     )
 }
