@@ -1,11 +1,11 @@
-package com.blitzapp.eventready.android.newarchitecture;
+package com.eventready.android.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
 
-import com.blitzapp.eventready.android.BuildConfig;
-import com.blitzapp.eventready.android.newarchitecture.components.MainComponentsRegistry;
-import com.blitzapp.eventready.android.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.eventready.android.BuildConfig;
+import com.eventready.android.newarchitecture.components.MainComponentsRegistry;
+import com.eventready.android.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;

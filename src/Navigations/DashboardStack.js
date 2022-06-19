@@ -58,6 +58,7 @@ export const headerTitle = {
     ContactUsScreen: 'Contact Us',
     NotificationsScreen: 'Notifications',
     MessagingScreen: 'Messaging',
+    ScheduleDetailsScreen:'Schedule Details'
 }
 export const renderDrawerIcon = (props) => {
     const navigation = useNavigation()

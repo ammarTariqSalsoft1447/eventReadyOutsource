@@ -47,7 +47,7 @@ const ScheduleDetailsScreen = props => {
             <View style={[styles.row,styles.rowHiddenBorder]}>
                 {renderInfo('Documents and Resources', false, false)}
             </View>
-            <MainButton
+            {/* <MainButton
                 onPress={() => props.navigation.pop()}
                 pressedColor='#C8A12D'
                 color='#252120'
@@ -64,7 +64,7 @@ const ScheduleDetailsScreen = props => {
                 textColor='#FFFFFF'
                 text="My Schedule"
                 style={styles.button}
-            />
+            /> */}
             <MainButton
                 onPress={() => props.navigation.navigate('AddNoteScreen')}
                 pressedColor='#C8A12D'

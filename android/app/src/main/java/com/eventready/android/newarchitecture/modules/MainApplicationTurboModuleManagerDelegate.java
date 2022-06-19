@@ -1,4 +1,4 @@
-package com.blitzapp.eventready.android.newarchitecture.modules;
+package com.eventready.android.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

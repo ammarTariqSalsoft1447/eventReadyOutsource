@@ -1,4 +1,4 @@
-package com.blitzapp.eventready.android;
+package com.eventready.android;
 
 
 

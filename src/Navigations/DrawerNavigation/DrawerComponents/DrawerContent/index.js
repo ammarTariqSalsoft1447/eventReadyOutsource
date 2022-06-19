@@ -55,7 +55,7 @@ const DrawerContent = props => {
         {renderDrawerItem('dashboard', require('../../../../Assets/images/dashboardIconn.png'), () => props.navigation.navigate('AnimatedDashboard'))}
         {renderDrawerItem('twitter', require('../../../../Assets/images/twitterIcon.png'))}
         {renderDrawerItem('my profile', require('../../../../Assets/images/myProfileDrawer.png'), () => props.navigation.navigate('AnimatedProfileStack'))}
-        {renderDrawerItem('contact us', require('../../../../Assets/images/contactUs.png'), () => props.navigation.navigate('AnimatedContactUs'))}
+        {/* {renderDrawerItem('contact us', require('../../../../Assets/images/contactUs.png'), () => props.navigation.navigate('AnimatedContactUs'))} */}
         {renderDrawerItem('logout', require('../../../../Assets/images/logout.png'), requestLogout)}
       </View>
       <ConfirmationPopup

@@ -1,9 +1,9 @@
-package com.blitzapp.eventready.android;
+package com.eventready.android;
 
 import android.app.Application;
 import android.content.Context;
 
-import com.blitzapp.eventready.android.newarchitecture.MainApplicationReactNativeHost;
+import com.eventready.android.newarchitecture.MainApplicationReactNativeHost;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
